@@ -33,7 +33,7 @@
 		}
 		else{
 			$contactID = $value[1];
-			require 'deleteContact.';
+			require 'deleteContact.php';
 			header('Location: ../index.php?table=people');
 		}
 	}

@@ -16,7 +16,6 @@
 				require 'insertOrganisation.php';
 			}
 			else{
-				$ID = $value[2];
 				require 'updateOrganisation.php';
 			}
 		}
@@ -25,7 +24,7 @@
 			$home = $_POST['home'];
 			$work = $_POST['work'];
 			$orgID = $_POST['organisation'];
-			if(strcmp($value[0], "add")){
+			if(strcmp($value[0], "add") == 0){
 				require 'insertContact.php';
 			}
 			else{
