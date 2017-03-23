@@ -3,5 +3,5 @@
 
 	$ps = $connection->prepare('SELECT * FROM Organisation WHERE ID = ?');
 	$ps->execute(array($orgID));
-	$orgByID = $ps->fetchAll();
+	$resultByID = $ps->fetchAll();
 ?>

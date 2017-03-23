@@ -3,5 +3,5 @@
 	
 	$ps = $connection->prepare('SELECT ID, name FROM Contact');
 	$ps->execute();
-	$contacts = $ps->fetchAll();
+	$resultAll = $ps->fetchAll();
 ?>

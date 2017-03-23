@@ -3,5 +3,5 @@
 
 	$ps = $connection->prepare('SELECT * FROM Contact WHERE ID = ?');
 	$ps->execute(array($contactID));
-	$contactByID = $ps->fetchAll();
+	$resultByID = $ps->fetchAll();
 ?>
