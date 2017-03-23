@@ -33,7 +33,7 @@
 			}
 		}
 
-		//header("Location: ../edit.php");
+		header("Location: ../edit.php");
 	}
 
 ?>
