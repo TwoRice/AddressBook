@@ -21,7 +21,13 @@
 					    	else if(strcmp($page, "people") == 0){
 					    		$firstCol = "Name";
 					    		$org = false;
-					    		require 'php/selectContacts.php';
+					    		if(isset($_GET['orgID'])){
+					    			$orgID = $_GET['orgID'];
+					    			require 'php/selectContactsByOrg.php';
+					    		}
+					    		else{
+					    			require 'php/selectContacts.php';
+					    		}
 					    	}	
 					    ?>
 					    <table class="table">
