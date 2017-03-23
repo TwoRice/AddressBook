@@ -124,7 +124,7 @@
                                 ?>
                                 <div class="row">
             				    	<div class="col-xs-12">
-            				    	    </br><button type="submit" class="btn btn-primary" name="save" value="<?= $action.','.$_SESSION['type'] ?>">Submit</button>
+            				    	    </br><button type="submit" class="btn btn-primary" name="save" value="<?= $action.','.$_SESSION['type'].','.$info[0] ?>">Submit</button>
             				    	</div>	
             				    </div>
 

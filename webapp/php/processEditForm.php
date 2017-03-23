@@ -1,5 +1,6 @@
 <?php
 
+	error_reporting( E_ALL );
 	if(isset($_POST['save'])){
 		$value = explode(",", $_POST['save']);
 		$name = $_POST['name'];
@@ -9,17 +10,18 @@
 		$county = $_POST['county'];
 		$postcode = $_POST['postcode'];
 		$email = $_POST['email'];
-		if(strcmp($value[1], "org"){
+		if(strcmp($value[1], "org") == 0){
 			$phone = $_POST['phone'];
-			if(strcmp($value[0], "add")){
+			if(strcmp($value[0], "add") == 0){
 				require 'insertOrganisation.php';
 			}
 			else{
+				$ID = $value[2];
 				require 'updateOrganisation.php';
 			}
 		}
 		else{
-			$phone = $_POST['mobile'];
+			$mobile = $_POST['mobile'];
 			$home = $_POST['home'];
 			$work = $_POST['work'];
 			$orgID = $_POST['organisation'];
@@ -27,9 +29,12 @@
 				require 'insertContact.php';
 			}
 			else{
+				$ID = $value[2];
 				require 'updateContact.php';	
 			}
 		}
+
+		//header("Location: ../edit.php");
 	}
 
 ?>
