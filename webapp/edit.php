@@ -24,7 +24,7 @@
                                     $info = $result[0];
                                 ?>
 
-                                        <!--NAME-->
+                                <!--NAME-->
             				    <div class="row">
             				    	<div class="col-xs-12">
             				    		<label class="control-label" for="name">Name</label>
@@ -104,11 +104,12 @@
                                         <select name="organisation" class="form-control">
                                             <?php 
                                                 foreach($resultAll as $row){
-                                                    if($info[11] === $row[0]){ 
+                                                    if($info[11] == $row[0]){
+                                                        echo $row[0]; echo $row[1]; 
                                             ?>
-                                            <option value="<?= $row[0] ?>" selected><?= $row[0].': '.$row[1] ?></option>
-                                            <php }else{ ?>
-                                            <option value="<?= $row[0] ?>"><?= $row[0].': '.$row[1] ?></option>
+                                            <option value="<?= $row[0] ?>" selected><?= $row[1] ?></option>
+                                            <?php }else{ ?>
+                                            <option value="<?= $row[0] ?>"><?= $row[1] ?></option>
                                             <?php }} ?>    
                                         </select>
                                     </div>
