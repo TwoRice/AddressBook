@@ -96,11 +96,15 @@
                                     </div>  
                                 </div>
 
+                                <!--ORGANISATION-->
+                                <?php require 'php/selectOrganisations.php'; ?>
                                 <div class="row">
                                     <div class="col-xs-12">
                                         <label class="control-label" for="organisation"></label>
                                         <select name="organisation" class="form-control">
-                                            <option></option>    
+                                            <?php foreach($result as $orgRow){ ?>
+                                            <option value="<?= orgRow[0].': '.orgRow[1] ?>"></option>
+                                            <?php } ?>    
                                         </select>
                                     </div>
                                 </div>
