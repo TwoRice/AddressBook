@@ -6,3 +6,12 @@ a {
 label{
 	padding-top: 10px;
 }
+
+.jumbotron{
+	background-color: #337ab7 !important;
+	color: #FFF !important;
+}
+
+.jumbotron h2{
+	color: #FFF;
+}
