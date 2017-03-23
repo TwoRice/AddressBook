@@ -12,8 +12,6 @@
 				    		$page = "org";
 				    	}
 
-				    	echo $page;
-
 				    	if(strcmp($page, "org") == 0){
 				    		$firstCol = "Organisation";
 				    		$org = true;
@@ -22,8 +20,6 @@
 				    		$firstCol = "Name";
 				    		$org = false;
 				    	}
-
-				    	echo $firstCol;
 				    ?>
 				    <table class="table">
 	 					<thead>
