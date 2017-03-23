@@ -20,10 +20,12 @@
 		header('Location: ../edit.php');
 	}
 	else if(isset($_POST['viewPeople'])){
-
+		$value = explode(",", $_POST['viewPeople']);
+		$orgID = $value[1];
+		header('Location: index.php?table=people&orgID='.$orgID);
 	}
 	else if(isset($_POST['delete'])){
-		$value = explode(",", $_POST['viewDetails']);
+		$value = explode(",", $_POST['delte']);
 	}
 	else if(isset($_POST['addNew'])){
 		$value = $_POST['addNew'];
