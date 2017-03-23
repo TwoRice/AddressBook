@@ -15,10 +15,10 @@
 
 			<div class="row">
 				<div class="col-xs-6">
-					<a href="#"><h2>Organisations</h2></a>
+					<a href="?table=org"><h2>Organisations</h2></a>
 				</div>
 				<div class="col-xs-6">
-					<a href="#"><h2>People</h2></a>
+					<a href="?table=people"><h2>People</h2></a>
 				</div>
 			</div>
 		</div>

@@ -4,12 +4,35 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
+				    <?php 
+				    	if(isset($_GET['table'])){
+				    		$page = $_GET['table'];
+				    	}
+				    	else{
+				    		$page = "org";
+				    	}
+
+				    	echo $page;
+
+				    	if(strcmp($page, "org") == 0){
+				    		$firstCol = "Organisation";
+				    		$org = true;
+				    	}
+				    	else if(strcmp($page, "people") == 0){
+				    		$firstCol = "Name";
+				    		$org = false;
+				    	}
+
+				    	echo $firstCol;
+				    ?>
 				    <table class="table">
 	 					<thead>
 							<tr>
-								<th>Organisation</th>
+								<th><?= $firstCol ?></th>
 								<th>Details</th>
+								<?php if($org){ ?>
 								<th>People</th>
+								<?php } ?>
 								<th>Delete</th>
 							</tr>
 						</thead>
@@ -17,7 +40,9 @@
 							<tr>
 								<th>Sample 1</th>
 								<th><button type="submit" class="btn">View Details</button></th>
+								<?php if($org){ ?>
 								<th><button type="submit" class="btn">View People</button></th>
+								<?php } ?>
 								<th><button type="submit" class="btn btn-danger">Delete <span class="glyphicon glyphicon-remove"></span></button></th>
 							</tr>
 							<tr>
