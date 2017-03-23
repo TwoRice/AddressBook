@@ -20,6 +20,8 @@
 				    		$firstCol = "Name";
 				    		$org = false;
 				    	}
+
+				    	require 'php/selectOrganisations.php';
 				    ?>
 				    <table class="table">
 	 					<thead>
@@ -33,26 +35,19 @@
 							</tr>
 						</thead>
 						<tbody>
+							<?php 
+								foreach($result as $row){ 
+									$btnValue = $page.','.$row[0];
+							?>
 							<tr>
-								<th>Sample 1</th>
-								<th><button type="submit" class="btn">View Details</button></th>
+								<th><?= $row[1]; ?></th>
+								<th><button type="submit" class="btn" value=<?= $btnValue ?>>View Details</button></th>
 								<?php if($org){ ?>
-								<th><button type="submit" class="btn">View People</button></th>
+								<th><button type="submit" class="btn" <?= $btnValue ?>>View People</button></th>
 								<?php } ?>
-								<th><button type="submit" class="btn btn-danger">Delete <span class="glyphicon glyphicon-remove"></span></button></th>
+								<th><button type="submit" class="btn btn-danger" <?= $btnValue ?>>Delete <span class="glyphicon glyphicon-remove"></span></button></th>
 							</tr>
-							<tr>
-								<th>Sample 2</th>
-								<th><button type="submit" class="btn">View Details</button></th>
-								<th><button type="submit" class="btn">View People</button></th>
-								<th><button type="submit" class="btn btn-danger">Delete <span class="glyphicon glyphicon-remove"></span></button></th>
-							</tr>
-							<tr>
-								<th>Sample 3</th>
-								<th><button type="submit" class="btn">View Details</button></th>
-								<th><button type="submit" class="btn">View People</button></th>
-								<th><button type="submit" class="btn btn-danger">Delete <span class="glyphicon glyphicon-remove"></span></button></th>
-							</tr>
+							<?php } ?>
 						</tbody>
 					</table>	
 				</div>
