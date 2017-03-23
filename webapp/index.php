@@ -39,14 +39,16 @@
 								foreach($result as $row){ 
 									$btnValue = $page.','.$row[0];
 							?>
+							<form method="POST" action="php/processForm.php">
 							<tr>
 								<th><?= $row[1]; ?></th>
-								<th><button type="submit" class="btn" value=<?= $btnValue ?>>View Details</button></th>
+								<th><button type="submit" class="btn" name="viewDetails" value=<?= $btnValue ?>>View Details</button></th>
 								<?php if($org){ ?>
-								<th><button type="submit" class="btn" <?= $btnValue ?>>View People</button></th>
+								<th><button type="submit" class="btn" name="viewPeople" value=<?= $btnValue ?>>View People</button></th>
 								<?php } ?>
-								<th><button type="submit" class="btn btn-danger" <?= $btnValue ?>>Delete <span class="glyphicon glyphicon-remove"></span></button></th>
+								<th><button type="submit" class="btn btn-danger" name="delete" value=<?= $btnValue ?>>Delete <span class="glyphicon glyphicon-remove"></span></button></th>
 							</tr>
+							</form>
 							<?php } ?>
 						</tbody>
 					</table>	
