@@ -22,10 +22,20 @@
 	else if(isset($_POST['viewPeople'])){
 		$value = explode(",", $_POST['viewPeople']);
 		$orgID = $value[1];
-		header('Location: index.php?table=people&orgID='.$orgID);
+		header('Location: ../index.php?table=people&orgID='.$orgID);
 	}
 	else if(isset($_POST['delete'])){
-		$value = explode(",", $_POST['delte']);
+		$value = explode(",", $_POST['delete']);
+		if(strcmp($value[0], "org") == 0){
+			$orgID = $value[1];
+			require 'deleteOrganisation.php';
+			header('Location: ../index.php?table=org');
+		}
+		else{
+			$contactID = $value[1];
+			require 'deleteContact.';
+			header('Location: ../index.php?table=people');
+		}
 	}
 	else if(isset($_POST['addNew'])){
 		$value = $_POST['addNew'];
