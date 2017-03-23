@@ -1,5 +1,10 @@
 <html>
 	<?php include 'header.php'; ?>
+	<script type="text/javascript">
+		$(document).ready(function(){
+    		$('.table').DataTable();
+		});
+	</script>
 
 		<div class="container">
 			<form method="POST" action="php/processForm.php">
