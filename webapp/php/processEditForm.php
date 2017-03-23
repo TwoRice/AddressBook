@@ -16,6 +16,7 @@
 				require 'insertOrganisation.php';
 			}
 			else{
+				$ID = $value[2];
 				require 'updateOrganisation.php';
 			}
 		}
@@ -33,7 +34,7 @@
 			}
 		}
 
-		header("Location: ../edit.php");
+		header("Location: ../index.php");
 	}
 
 ?>
