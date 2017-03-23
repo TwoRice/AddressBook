@@ -6,10 +6,16 @@
 		$value = explode(",", $_POST['viewDetails']);
 		if(strcmp($value[0], "org") == 0){
 			$orgID = $value[1];
-			require 'selectOrgByID.php';
-			$_SESSION['result'] = $result;
-			header('Location: ../edit.php');
+			require 'selectOrgByID.php';			
 		}
+		else{
+			echo "Hello";
+			$contactID = $value[1];
+			require 'selectContactByID.php';
+			
+		}
+		$_SESSION['result'] = $result;
+		header('Location: ../edit.php');
 	}
 	else if(isset($_POST['viewPeople'])){
 
