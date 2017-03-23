@@ -15,13 +15,13 @@
 				    	if(strcmp($page, "org") == 0){
 				    		$firstCol = "Organisation";
 				    		$org = true;
+				    		require 'php/selectOrganisations.php';
 				    	}
 				    	else if(strcmp($page, "people") == 0){
 				    		$firstCol = "Name";
 				    		$org = false;
-				    	}
-
-				    	require 'php/selectOrganisations.php';
+				    		require 'php/selectContacts.php';
+				    	}	
 				    ?>
 				    <table class="table">
 	 					<thead>
