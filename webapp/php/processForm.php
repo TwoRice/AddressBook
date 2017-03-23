@@ -9,7 +9,6 @@
 			require 'selectOrgByID.php';			
 		}
 		else{
-			echo "Hello";
 			$contactID = $value[1];
 			require 'selectContactByID.php';
 			

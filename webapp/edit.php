@@ -69,12 +69,42 @@
             				    </div>
 
             				    <!--PHONE-->
-            				    <div class="row">
+            				    <?php if(sizeof($row) < 10){ ?>
+                                <div class="row">
             				    	<div class="col-xs-12">
             				    	    <label class="control-label" for="email">Phone No</label>
             				    	    <input type="text" name="email" class="form-control" value="<?= $row[8] ?>">	
             				    	</div>	
             				    </div>
+                                <?php }else{ ?>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="control-label" for="email">Mobile No</label>
+                                        <input type="text" name="email" class="form-control" value="<?= $row[8] ?>">    
+                                    </div>  
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="control-label" for="email">Home No</label>
+                                        <input type="text" name="email" class="form-control" value="<?= $row[9] ?>">    
+                                    </div>  
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="control-label" for="email">Work No</label>
+                                        <input type="text" name="email" class="form-control" value="<?= $row[10] ?>">    
+                                    </div>  
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="control-label" for="organisation"></label>
+                                        <select name="organisation" class="form-control">
+                                            <option></option>    
+                                        </select>
+                                    </div>
+                                </div>
+                                <?php } ?>
 
             				    <!--SUBMIT-->
             				    <div class="row">
