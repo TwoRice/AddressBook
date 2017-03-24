@@ -10,5 +10,6 @@ I programmed my solution in a few hours over 2 days in PHP. I chose to use PHP a
 2. Used functions instead of loads of tiny scripts (rather silly that I didn't do this)<br/>
 3. Implemented REST<br/>
 4. Used more robust resource referencing (I used ../ and some other bad practices in most cases, sqlConnection.php is an example where I didn't)<br/><br/>
+
 I could talk a lot more about what I did and didn't do well, but I'll keep it short for now.
 
